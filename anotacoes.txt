@@ -1,0 +1,5 @@
+Paleta de cores da foto: Tide #BBB3AB | Cocoa Brown #322720 | Shingle Fawn #6D4A39 | Roman Coffee #7C6247
+                         acinzentado    marrom escuro		  marrom médio		 marrom claro
+
+Paleta de cores com 05: efefef(cinza claro) | ddbeaf (bege) | a89890 (cinza amarronzado médio) | 6d4a39 (marrom escuro) | 421d0b (marrom muito escuro)
+				5d5676 (roxo)

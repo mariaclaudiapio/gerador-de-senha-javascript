@@ -13,7 +13,7 @@ body {
 }
 
 html {
-  background: linear-gradient(180deg, #ea02ff 0%, #0097ff 100%);
+  background: linear-gradient(180deg, #ddbeaf 0%, #6d4a39 100%);
 }
 
 input:focus {
@@ -37,12 +37,12 @@ input:focus {
 #register-banner h1 {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: #efefef;
   word-spacing: 50rem;
 }
 
 #banner-layer {
-  background-color: rgba(25, 11, 122, 0.7);
+  background-color: rgba(109, 74, 57, 0.7);
   height: 100%;
   padding: 2rem;
   display: flex;
@@ -50,7 +50,7 @@ input:focus {
 }
 
 #register-form {
-  background-color: #fdfdfd;
+  background-color: #efefef;
   padding: 2rem;
   width: 50%;
   display: flex;
@@ -64,11 +64,11 @@ input:focus {
 #register-form p {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #aaaaaa;
+  color: #999898;
   font-size: 0.8rem;
 }
 #register-form #generated-password {
-  border: 1px solid #0099ff;
+  border: 1px solid #3CBAB1;
   border-radius: 4px;
   font-weight: bold;
   font-size: 1.2rem;
@@ -76,15 +76,16 @@ input:focus {
   color: #333333;
   text-align: center;
   margin-bottom: 1rem;
-  display: none;
 }
 #register-form #generated-password p {
-  color: #81d340;
+  color: #6d4a39;
   margin-bottom: 0.5rem;
 }
 #register-form input[type=submit] {
-  background-color: #81d340;
-  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #6d4a39;
+  color: #efefef;
   opacity: 0.8;
   border: none;
   border-radius: 2rem;
@@ -108,8 +109,9 @@ input:focus {
   margin-bottom: 0.6rem;
 }
 .form-control input {
+  background-color: #efefef;
   border: none;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #999898;
   padding: 0.6rem 0;
 }
 
@@ -119,5 +121,5 @@ input:focus {
   transition: 0.4s;
 }
 #generate-password:hover {
-  color: #0099ff;
+  color: #3CBAB1;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,9 +1,19 @@
+$light-color: #efefef
+$secondary-light-color: #ddbeaf
+$medium-color: #6d4a39
+$secondary-medium-color: #999898
+$dark-font-color: #333333
+$primary-font: "Montserrat", sans-serif
+$contrast-color: #3CBAB1
+
 *
     padding: 0
     margin: 0
     box-sizing: border-box
-    color: #333333
-    font-family: "Montserrat", sans-serif
+    color: $dark-font-color
+    font-family: $primary-font
+
+:root
 
 html,
 body
@@ -11,7 +21,7 @@ body
     min-height: 100vh
 
 html
-    background: linear-gradient(180deg, #ea02ff 0%, #0097ff 100%)
+    background: linear-gradient(180deg, $secondary-light-color 0%, $medium-color 100%)
 
 input
     &:focus
@@ -32,18 +42,18 @@ input
     h1
         font-size: 4rem
         margin-bottom: 1.5rem
-        color: #ffffff
+        color: $light-color
         word-spacing: 50rem
 
 #banner-layer
-    background-color: rgba(25, 11, 122, .7)
+    background-color: rgba(109, 74, 57, .7)
     height: 100%
     padding: 2rem
     display: flex
     align-items: center
 
 #register-form
-    background-color: #fdfdfd
+    background-color: $light-color
     padding: 2rem
     width: 50%
     display: flex
@@ -55,10 +65,10 @@ input
     p
         text-align: center
         margin-bottom: 1.5rem
-        color: #aaaaaa
+        color: $secondary-medium-color
         font-size: 0.8rem
     #generated-password
-        border: 1px solid #0099ff
+        border: 1px solid $contrast-color
         border-radius: 4px
         font-weight: bold
         font-size: 1.2rem
@@ -66,13 +76,15 @@ input
         color: #333333
         text-align: center
         margin-bottom: 1rem
-        display: none
+        // display: none
         p
-            color: #81d340
+            color: $medium-color
             margin-bottom: 0.5rem
     input[type="submit"]
-        background-color: #81d340
-        color: #ffffff
+        font-size: 18px
+        font-weight: bold
+        background-color: $medium-color
+        color: $light-color
         opacity: .8
         border: none
         border-radius: 2rem
@@ -92,8 +104,9 @@ input
         font-weight: bold
         margin-bottom: .6rem
     input
+        background-color: $light-color
         border: none
-        border-bottom: 1px solid #aaaaaa
+        border-bottom: 1px solid $secondary-medium-color
         padding: .6rem 0
 
 #generate-password
@@ -101,4 +114,4 @@ input
     cursor: pointer
     transition: .4s
     &:hover
-        color: #0099ff
+        color: $contrast-color
