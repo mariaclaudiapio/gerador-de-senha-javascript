@@ -47,7 +47,7 @@ const generatePassword = (
     generators.push(getNumber);
   }
 
-  if (symbolsInput) {
+  if (symbolsInput.checked) {
     generators.push(getSymbol);
   }
 
