@@ -1,5 +1,14 @@
 const generatePasswordButton = document.querySelector("#generate-password");
 const generatedPasswordElement = document.querySelector("#generated-password");
+const openCloseGeneratorButton = document.querySelector(
+  "#open-generate-password"
+);
+const generatePasswordContainer = document.querySelector("#generate-options");
+const lengthInput = document.querySelector("#length");
+const lettersInput = document.querySelector("#letters");
+const numbersInput = document.querySelector("#numbers");
+const symbolsInput = document.querySelector("#symbols");
+const copyPasswordButton = document.querySelector("#copy-password");
 
 const getLetterLowerCase = () => {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -26,16 +35,27 @@ const generatePassword = (
 ) => {
   let password = "";
 
-  const passwordLength = 10;
+  const passwordLength = +lengthInput.value;
 
-  const generators = [
-    getLetterLowerCase,
-    getLetterUpperCase,
-    getNumber,
-    getSymbol,
-  ];
+  const generators = [];
 
-  for (i = 0; i < passwordLength; i = i + 4) {
+  if (lettersInput.checked) {
+    generators.push(getLetterLowerCase, getLetterUpperCase);
+  }
+
+  if (numbersInput.checked) {
+    generators.push(getNumber);
+  }
+
+  if (symbolsInput) {
+    generators.push(getSymbol);
+  }
+
+  if (generators.length === 0) {
+    return;
+  }
+
+  for (i = 0; i < passwordLength; i = i + generators.length) {
     generators.forEach(() => {
       const randomValue =
         generators[Math.floor(Math.random() * generators.length)]();
@@ -57,4 +77,22 @@ generatePasswordButton.addEventListener("click", () => {
     getNumber,
     getSymbol
   );
+});
+
+openCloseGeneratorButton.addEventListener("click", () => {
+  generatePasswordContainer.classList.toggle("hide");
+});
+
+copyPasswordButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const password = generatedPasswordElement.querySelector("h4").innerText;
+
+  navigator.clipboard.writeText(password).then(() => {
+    copyPasswordButton.innerText = "Senha copiada com sucesso!";
+
+    setTimeout(() => {
+      copyPasswordButton.innerText = "Copiar";
+    }, 1500);
+  });
 });
