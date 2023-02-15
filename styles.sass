@@ -80,9 +80,7 @@ input
         p
             color: $medium-color
             margin-bottom: 0.5rem
-    input[type="submit"],
-    #generate-options button,
-    #copy-password
+    .submit
         font-size: 18px
         font-weight: bold
         background-color: $medium-color
@@ -93,7 +91,7 @@ input
         padding: 1rem 1.4rem
         max-width: 150px
         cursor: pointer
-        align-self: center
+        align-self: flex-end
         transition: .4s
         &:hover
             opacity: 1
@@ -128,20 +126,23 @@ input
         align-items: center
     label
         font-size: .8rem
+
     input[type="text"]
         max-width: 30px
         text-align: center
         border: 1px solid #ccc
-    button
-        display: block
-        margin: 0 auto
 
-#copy-password button
+#generate-options .submit
+    background-color: $contrast-color
+    display: block
+    margin: 0 auto
+
+#copy-password.submit
     margin: 1rem auto
     background-color: transparent
     border: 2px solid $contrast-color
     color: $contrast-color
-    padding: 0.5rem 1rem
+    padding: .5rem 1rem
 
 .hide
     display: none
